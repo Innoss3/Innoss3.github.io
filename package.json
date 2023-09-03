@@ -1,6 +1,6 @@
 {
   "name": "cours-react-1",
-  "homepage": "https://Innoss3.github.io/portfolio/",
+  "homepage": "https://Innoss3.github.io/portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,5 +41,8 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
 }
