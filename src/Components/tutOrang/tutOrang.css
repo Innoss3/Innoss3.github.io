@@ -1,0 +1,53 @@
+.container.tuto_container{
+    width: 60%;
+    padding-bottom: 4rem;
+    height: auto;
+}
+
+.tuto_avatar{
+    width: 30%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    margin: 0 auto 1rem;
+}
+#img_tuto{
+    border-radius: 1%;
+    height: auto;
+}
+
+.tuto{
+    background: var(--color-bg-variant);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0 0 2rem 2rem;
+    user-select: none;
+}
+
+.client_review{
+    color: var(--color-light);
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+
+
+/*================== MEDIA QUERY (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px) {
+    .container.temoignage_container{
+        width: 60%;
+    }
+}
+    /* ================== MEDIA QUERY (SMALL DEVICES) =============== */
+    @media screen and (max-width: 600px) {
+        .container.temoignage_container{
+        width: var(--container-width-sm);
+        height: auto;
+    }
+    
+    .client_review{
+        width: var(--container-width-sm);
+    }
+    }
