@@ -6,7 +6,7 @@ import AVTR3 from "../../assets/fonts/img/IMG-20230601-WA0022.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -44,10 +44,9 @@ const temoignage = () => {
       <Swiper
         className="container temoignage_container"
         pagination={{
-          type: "",
+          dynamicBullets: true,
         }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination]}
       >
         {data.map(({ avatar, name, review }, index) => {
           return (

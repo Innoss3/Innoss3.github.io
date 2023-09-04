@@ -44,7 +44,10 @@ const contact = () => {
             <BsWhatsapp className="contact_option-icon" />
             <h4>Whatsapp</h4>
             <h5>+243 818309686</h5>
-            <a href="https://wa.me/243818309686" target="_blank">
+            <a
+              href="https://api.whatsapp.com/send/?phone=243818309686"
+              target="_blank"
+            >
               Envoyez moi un message
             </a>
           </article>

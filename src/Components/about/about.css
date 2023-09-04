@@ -1,135 +1,159 @@
-#about{
-    position: relative;
-    overflow: hidden;
-    height: 80vh;
+#about {
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
 }
-.about_container{
-    display: grid;
-    grid-template-columns: 35% 50%;
-    gap: 15%;
-    position: relative;
+.about_container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+  position: relative;
 }
-.about_me{
-    width: 90%;
-    aspect-ratio: 1/1;
-    border-radius: 2rem;
-    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
-    display: grid;
-    place-items: center;
+.about_me {
+  width: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--color-primary),
+    transparent
+  );
+  display: grid;
+  place-items: center;
 }
-h4{
-    text-align: center;
+h4 {
+  text-align: center;
 }
 .about_me-image {
-    border-radius: 2rem;
-    overflow: hidden;
-    transform: rotate(-10deg);
-    transition: var(--transition);
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: rotate(-10deg);
+  transition: var(--transition);
 }
-.about_me-image:hover{
-     transform: rotate(0);
+.about_me-image:hover {
+  transform: rotate(0);
 }
-.about_cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin: 2rem auto 2rem;
+.about_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem auto 2rem;
 }
-.about_card{
-    background: var(--color-bg-variant);
-    border: 1px solid transparent;
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    transition: var(--transition);
+.about_card {
+  background: var(--color-bg-variant);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
 }
-.about_card:hover{
-    background: transparent;
-    border-color: var(--color-primary-variant);
-    cursor: default;
+.about_card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
 }
-.about_icon{
-    color: var(--color-primary);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+.about_icon {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
-.about_card h4{
-    font-style: 0.95rem;
+.about_card h4 {
+  font-style: 0.95rem;
 }
-.about_card small{
-    font-size: 0.7rem;
-    color: var(--color-light);
+.about_card small {
+  font-size: 0.7rem;
+  color: var(--color-light);
 }
-.about_content .p1{
-    margin: 2rem 0 2.6rem;
-    color: var(--color-light);
+.about_content .p1 {
+  margin: 2rem 0 2.6rem;
+  color: var(--color-light);
 }
-.header_socials{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem ;
-    position: absolute;
-    left: 2rem;
-    bottom: 3rem;
-    padding: 3rem;
+.header_socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
+  padding: 3rem;
 }
-.header_socials::after{
-    content: '';
-    width: 1px;
-    height: 2rem;
-    background: var(--color-primary);
+.header_socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
 }
 /* ================= SCROLL DOWN ================= */
-.scroll_down{
+.scroll_down {
+  position: absolute;
+  right: 1rem;
+  bottom: 20rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+  padding: 3rem;
+}
+/*================== MEDIA QUERY (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px) {
+  .about_container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .about_me {
+    width: 50%;
+    margin: 2rem auto 4rem;
+  }
+  .about_content p {
+    margin: 1rem 0 1.5rem;
+  }
+  .scroll_down {
     position: absolute;
     right: 1rem;
-    bottom: 20rem;
+    bottom: 40rem;
     transform: rotate(90deg);
     font-weight: 300;
     font-size: 0.9rem;
     padding: 3rem;
-}
-/*================== MEDIA QUERY (MEDIUM DEVICES) =============== */
-@media screen and (max-width: 1024px) {
-    .about_container{
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-    .about_me{
-        width: 50%;
-        margin: 2rem auto 4rem;
-    }
-    .about_content p{
-        margin: 1rem 0 1.5rem;
-    }
+  }
+  .header_socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: absolute;
+    left: 2rem;
+    bottom: 35rem;
+    padding: 3rem;
+  }
 }
 
 /* ================== MEDIA QUERY (SMALL DEVICES) =============== */
 @media screen and (max-width: 600px) {
-    #about{
-        overflow: hidden;
-        height: 100vh;
-    }
-    .about_container{
-        margin-top: 4rem;
-    }
-    .about_me{
-        width: 70%;
-        margin: 0 auto 3rem;
-    }
-    .about_cards{
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-    .about_content{
-        text-align: center;
-    }
-    .about_content p{
-        margin: 1.5rem 0;
-    }
-    .header_socials, .scroll_down{
-        display: none;
-    }
-   
+  #about {
+    overflow: hidden;
+    height: auto;
+  }
+  .about_container {
+    margin-top: 4rem;
+  }
+  .about_me {
+    width: 70%;
+    margin: 0 auto 3rem;
+  }
+  .about_cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .about_content {
+    text-align: center;
+  }
+  .about_content p {
+    margin: 1.5rem 0;
+  }
+  .header_socials,
+  .scroll_down {
+    display: none;
+  }
 }
