@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./temoignage.css";
-import AVTR1 from "../../assets/fonts/img/3337.jpg";
-import AVTR2 from "../../assets/fonts/img/3553341.jpg";
-import AVTR3 from "../../assets/fonts/img/18132.jpg";
-import AVTR4 from "../../assets/fonts/img/analyse-donnees-commerciales.jpg";
-
-import { Pagination } from "swiper";
+import AVTR1 from "../../assets/fonts/img/IMG-20230903-WA0000.jpg";
+import AVTR2 from "../../assets/fonts/img/FB_IMG_16937728455023934.jpg";
+import AVTR3 from "../../assets/fonts/img/IMG-20230601-WA0022.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Pagination, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,41 +15,39 @@ const data = [
   {
     avatar: AVTR1,
     name: "Grace Tshim's",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, impedit pariatur. Obcaecati dolores rerum corporis ducimus provident, asperiores eum debitis quaerat odit veniam neque eligendi consequuntur, totam quae magnam corrupti!",
+    review: `Je suis l'un des collaborateurs de ID DIAKIESE
+    Je connais ce gars ça fait déja 5 ans 
+    il est vraiment super dans les domaines citez ci-haut `,
   },
   {
     avatar: AVTR2,
     name: "Josué ISWA",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, impedit pariatur. Obcaecati dolores rerum corporis ducimus provident, asperiores eum debitis quaerat odit veniam neque eligendi consequuntur, totam quae magnam corrupti!",
+    review: `Je suis Josué ISWA Develloper web & mobile
+    Je connais ce gars dans des nombreuses réalisations 
+    c'est un doué fantastic et super intéressant`,
   },
   {
     avatar: AVTR3,
     name: "Corneille KWETE",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, impedit pariatur. Obcaecati dolores rerum corporis ducimus provident, asperiores eum debitis quaerat odit veniam neque eligendi consequuntur, totam quae magnam corrupti!",
-  },
-  {
-    avatar: AVTR4,
-    name: "Christelle KIFUGWASI",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, impedit pariatur. Obcaecati dolores rerum corporis ducimus provident, asperiores eum debitis quaerat odit veniam neque eligendi consequuntur, totam quae magnam corrupti!",
+    review: `Je suis Monsieur Corneille
+    J'ai connu ce gars lors d'une conférence je vous rassure 
+    il est vraiment super dans les domaines des réseaux & base des donnés`,
   },
 ];
 
 const temoignage = () => {
   return (
     <section id="temoignage">
-      <h5>Avis des clients</h5>
+      <h4>Avis des clients</h4>
       <h2>Temoignages</h2>
 
       <Swiper
         className="container temoignage_container"
-        modules={[]}
-        spaceBetween={40}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
+        pagination={{
+          type: "",
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
       >
         {data.map(({ avatar, name, review }, index) => {
           return (

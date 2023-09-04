@@ -20,6 +20,7 @@
     text-align: center;
     padding: 2rem;
     border-radius: 0 0 2rem 2rem;
+    min-height: 50vh;
 }
 
 .client_review{
@@ -35,15 +36,29 @@
 
 /*================== MEDIA QUERY (MEDIUM DEVICES) =============== */
 @media screen and (max-width: 1024px) {
-    .container.temoignage_container{
+    .container.tuto_container{
         width: 60%;
     }
+    .tuto{
+        font-size: 1.5rem;
+    }
+    .tuto_avatar{
+        width: 70%;
+        overflow: hidden;
+        margin: 0 auto 0.5rem;
+    }
+
 }
     /* ================== MEDIA QUERY (SMALL DEVICES) =============== */
     @media screen and (max-width: 600px) {
-        .container.temoignage_container{
+        .container.tuto_container{
         width: var(--container-width-sm);
         height: auto;
+    }
+    .tuto_avatar{
+        width: 60%;
+        overflow: hidden;
+        margin: 0 auto 0.5rem;
     }
     
     .client_review{

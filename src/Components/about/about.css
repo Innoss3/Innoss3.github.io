@@ -1,18 +1,25 @@
-
+#about{
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+}
 .about_container{
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
+    position: relative;
 }
 .about_me{
-    width: 100%;
+    width: 90%;
     aspect-ratio: 1/1;
     border-radius: 2rem;
     background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
     display: grid;
     place-items: center;
 }
-
+h4{
+    text-align: center;
+}
 .about_me-image {
     border-radius: 2rem;
     overflow: hidden;
@@ -26,6 +33,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    margin: 2rem auto 2rem;
 }
 .about_card{
     background: var(--color-bg-variant);
@@ -45,7 +53,7 @@
     font-size: 1.4rem;
     margin-bottom: 1rem;
 }
-.about_card h5{
+.about_card h4{
     font-style: 0.95rem;
 }
 .about_card small{
@@ -55,6 +63,32 @@
 .about_content .p1{
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
+}
+.header_socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem ;
+    position: absolute;
+    left: 2rem;
+    bottom: 3rem;
+    padding: 3rem;
+}
+.header_socials::after{
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+/* ================= SCROLL DOWN ================= */
+.scroll_down{
+    position: absolute;
+    right: 1rem;
+    bottom: 20rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+    padding: 3rem;
 }
 /*================== MEDIA QUERY (MEDIUM DEVICES) =============== */
 @media screen and (max-width: 1024px) {
@@ -73,8 +107,15 @@
 
 /* ================== MEDIA QUERY (SMALL DEVICES) =============== */
 @media screen and (max-width: 600px) {
+    #about{
+        overflow: hidden;
+        height: 100vh;
+    }
+    .about_container{
+        margin-top: 4rem;
+    }
     .about_me{
-        width: 65%;
+        width: 70%;
         margin: 0 auto 3rem;
     }
     .about_cards{
@@ -86,6 +127,9 @@
     }
     .about_content p{
         margin: 1.5rem 0;
+    }
+    .header_socials, .scroll_down{
+        display: none;
     }
    
 }

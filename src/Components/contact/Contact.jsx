@@ -20,7 +20,7 @@ const contact = () => {
   };
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
+      <h4>Get In Touch</h4>
       <h2>Contactez Moi!</h2>
       <div className="container contact_container">
         <div className="contact_options">
@@ -36,7 +36,7 @@ const contact = () => {
             <FaFacebookSquare className="contact_option-icon" />
             <h4>Facebook</h4>
             <h5>Cullinan Diakiese</h5>
-            <a href="https://web.facebook.com/innoss.diaks" target="_blank">
+            <a href="https://www.facebook.com/innossD/" target="_blank">
               Envoyez moi un message
             </a>
           </article>
@@ -44,10 +44,7 @@ const contact = () => {
             <BsWhatsapp className="contact_option-icon" />
             <h4>Whatsapp</h4>
             <h5>+243 818309686</h5>
-            <a
-              href="https://api.whatsapp.com/send?phone+243818309686"
-              target="_blank"
-            >
+            <a href="https://wa.me/243818309686" target="_blank">
               Envoyez moi un message
             </a>
           </article>

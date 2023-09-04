@@ -48,9 +48,12 @@ const data = [
   {
     avatar: AVTR5,
     name: "Etape 5",
-    review: `Dans la toute dernière étape on vous demanderez un code pin, pour l'obtenir?\n
-       ecrivez moi sur mon compte facebook ou whatsapp en privée, \n
-        pour cela allez dans la section contact et cliquez sur l'un de reseaux sociaux pour me contactez en privée`,
+    review: `Dans la toute dernière étape on vous demanderez un code pin `,
+  },
+  {
+    review: `Pour avoir le code PIN du paradis:
+    ecrivez moi sur mon compte facebook ou whatsapp en privée, \n
+    Allez dans la section contactez moi`,
   },
 ];
 
